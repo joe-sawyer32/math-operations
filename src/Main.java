@@ -26,13 +26,13 @@ public class Main {
     private static double getNumber() {
         System.out.println("Please enter a number:");
         Scanner scanner = new Scanner(System.in);
-        double userInput = 0;
+        double userInput;
         while (true) {
             try {
                 userInput = Double.parseDouble(scanner.nextLine());
                 break;
-            } catch (NumberFormatException ignore){
-                System.out.println("Invalid input. Please enter a number.");
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage() + " -- Invalid Input");
             }
         }
 
